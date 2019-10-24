@@ -30,7 +30,7 @@ class TodoListAdapter(private val todoList : List<TodoModel>, val listIntf: List
         override fun bindViews(todoModel: TodoModel, position: Int) {
             taskName.text = todoModel.taskName
             taskName.setOnClickListener {
-                listIntf.listClicked<TodoModel>(position)
+                listIntf.listClicked<TodoModel>(position, todoModel)
             }
         }
 

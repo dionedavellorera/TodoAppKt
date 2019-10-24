@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity(), ListIntf<TodoModel> {
         }
     }
 
-    override fun <T> listClicked(position: Int) {
-        Log.d("MYDATA22", arrayOfTodo.get(position).taskName)
+    override fun <T> listClicked(position: Int, any: Any) {
+        var obj:TodoModel = any as TodoModel
+
+        Log.d("MYDATA22", obj.taskName)
     }
 }
